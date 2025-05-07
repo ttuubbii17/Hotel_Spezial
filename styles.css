@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Stilizacija za tijelo stranice */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+
+
+/* Stilizacija za gornju navigaciju */
+.top-nav {
+    background-color: #1f1b1b;
+    overflow: hidden;
+    text-align: center; /* Centriranje linkova */
+    position: relative;
+    width: 100%; /* Širina cijele stranice */
+
+}
+
+.top-nav a {
+    display: inline-block; /* Promjena sa 'float: left' na 'inline-block' */
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    background-color: #575757;
+}
+
+/* Stilizacija za lijevu navigaciju */
+.left-nav {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding-top: 250px;
+    border-right: 1px solid #ddd;
+    z-index: 5; /* iznad sadržaja, ispod headera ako treba */
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+
+.left-nav a {
+    display: flex;
+    color: #333;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.left-nav a:hover {
+    background-color: #ddd;
+}
+
+/* Stilizacija za glavni sadržaj */
+.content {
+    margin-left: 200px; /* isti kao širina .left-nav */
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+}
+
+
+/* Stilizacija za footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position:static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%; /* cijela širina prozora */
+    height: 250px; /* visina možeš prilagoditi po želji */
+    background-image: url('Slike/Hotel_front.jpg'); /* promijeni putanju po potrebi */
+    background-size: 80%; /* slika se rastegne da prekrije cijeli header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centriranje vertikalno */
+    align-items: center;     /* centriranje horizontalno */
+    color: white;
+    z-index: 10;
+    text-align: center;
+    background-image: black;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* čitljivost teksta na slici */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.slika-okvir {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slika-okvir img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.galerija {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.galerija img {
+    width: 44%; /* Približno 4 slike u redu */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.galerija img:hover {
+    transform: scale(1.1); /* Povećanje za 10% */
+}
+
+/* Za manje ekrane: 2 slike u redu */
+@media (max-width: 768px) {
+    .galerija img {
+        width: 45%;
+    }
+}
+
+/* Za jako male ekrane: 1 slika u redu */
+@media (max-width: 480px) {
+    .galerija img {
+        width: 90%;
+    }
+}
+
+.pdf-okvir {
+    width: 1250px;    /* širina A4 stranice */
+    height: 800px;  /* visina A4 stranice */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .pdf-okvir iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .galerija_sport {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.galerija_sport img {
+    width: 22%; /* Približno 4 slike u redu */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.galerija_sport img:hover {
+    transform: scale(1.1); /* Povećanje za 10% */
+}
+
+/* Za manje ekrane: 2 slike u redu */
+@media (max-width: 768px) {
+    .galerija_sport img {
+        width: 45%;
+    }
+}
+
+/* Za jako male ekrane: 1 slika u redu */
+@media (max-width: 480px) {
+    .galerija_sport img {
+        width: 90%;
+    }
+}
