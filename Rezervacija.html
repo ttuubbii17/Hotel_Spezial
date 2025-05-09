@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Spezial</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Povezivanje s CSS datotekom -->
+    
+ 
+</head>
+<div class="rezervacija-forma">
+    <h2>Rezervacija sobe</h2>
+    <form action="info.hotelspezial@gmail.com" method="post">
+      <label for="ime">Ime i prezime:</label>
+      <input type="text" id="ime" name="ime" required>
+  
+      <label for="email">Email adresa:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="dolazak">Datum dolaska:</label>
+      <input type="date" id="dolazak" name="dolazak" required>
+  
+      <label for="odlazak">Datum odlaska:</label>
+      <input type="date" id="odlazak" name="odlazak" required>
+  
+      <label for="osobe">Broj osoba:</label>
+      <input type="number" id="osobe" name="osobe" min="1" max="10" required>
+  
+      <label for="soba">Tip sobe:</label>
+      <select id="soba" name="soba">
+        <option value="Osnovno noćenje">Basic</option>
+        <option value="Soba uz bazen">Spezial</option>
+        <option value="Villa">Premium</option>
+      </select>
+  
+      <label for="napomene">Dodatne napomene:</label>
+      <textarea id="napomene" name="napomene" rows="4"></textarea>
+  
+      <button type="submit">Pošalji rezervaciju</button>
+    </form>
+  </div>
+</html>
