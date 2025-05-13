@@ -30,9 +30,9 @@
   
       <label for="soba">Tip sobe:</label>
       <select id="soba" name="soba">
-        <option value="Osnovno noćenje">Basic</option>
-        <option value="Soba uz bazen">Spezial</option>
-        <option value="Villa">Premium</option>
+        <option value="Basic">Basic</option>
+        <option value="Spezial">Spezial</option>
+        <option value="Premium">Premium</option>
       </select>
 
         <label for="nacin-placanja">Način plaćanja:</label>
@@ -44,7 +44,7 @@
         <option value="bankovni">Bankovni prijenos</option>
         </select>
 
-        <label for="iznos">Iznos za uplatu (€):</label>
+        <label for="iznos">Ukupan iznos (€):</label>
         <input type="number" id="iznos" name="iznos" min="0" step="10.0" required>
   
       <label for="napomene">Dodatne napomene:</label>
@@ -53,6 +53,47 @@
       <button type="submit">Pošalji rezervaciju</button>
     </form>
   </div>
+  <script>
+    const dolazak = document.getElementById('dolazak');
+    const odlazak = document.getElementById('odlazak');
+    const soba = document.getElementById('soba');
+    const placanje = document.getElementById('nacin-placanja');
+    const iznos = document.getElementById('iznos');
+  
+    const cijenePoNoci = {
+      Basic: 100,
+      Spezial: 200,
+      Premium: 300,
+    };
+  
+    function izracunajUkupanIznos() {
+      const tipSobe = soba.value;
+      const nacin = placanje.value;
+      const datumDolaska = new Date(dolazak.value);
+      const datumOdlaska = new Date(odlazak.value);
+  
+      if (tipSobe && cijenePoNoci[tipSobe] && dolazak.value && odlazak.value && datumOdlaska > datumDolaska) {
+        const brojNocenja = Math.ceil((datumOdlaska - datumDolaska) / (1000 * 60 * 60 * 24));
+        const ukupno = brojNocenja * cijenePoNoci[tipSobe];
+  
+        iznos.value = ukupno.toFixed(2);
+  
+        if (nacin === 'gotovina') {
+          iznos.readOnly = true;
+        } else {
+          iznos.readOnly = false;
+        }
+      } else {
+        iznos.value = '';
+        iznos.readOnly = false;
+      }
+    }
+  
+    soba.addEventListener('change', izracunajUkupanIznos);
+    dolazak.addEventListener('change', izracunajUkupanIznos);
+    odlazak.addEventListener('change', izracunajUkupanIznos);
+    placanje.addEventListener('change', izracunajUkupanIznos);
+  </script>  
 </body>
   
 </html>
