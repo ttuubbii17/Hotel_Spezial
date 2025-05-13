@@ -7,7 +7,7 @@ body {
     padding: 0;
     height: 100%; 
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    text-align: justify;
     font-size: 20px;
 }
 
@@ -192,13 +192,15 @@ header p {
 }
 
 .pdf-okvir {
-    width: 1250px;    /* širina A4 stranice */
-    height: 800px;  /* visina A4 stranice */
+    align-items: center;
+    width: 1050px;    /* širina A4 stranice */
+    height: 600px;  /* visina A4 stranice */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     overflow: hidden;
   }
   
   .pdf-okvir iframe {
+    align-items: center;
     width: 100%;
     height: 100%;
     border: none;
