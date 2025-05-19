@@ -12,6 +12,13 @@ body {
     background-image: url('Slike/Pozadina(drvo)_body.jpeg');
 }
 
+@media (max-width: 768px) {
+  body {
+    background: none;
+    background-color: white; /* ili druga neutralna boja */
+  }
+}
+
 h1, h2 {
   font-family: 'Cormorant Garamond', serif;
 }
@@ -72,6 +79,7 @@ header p {
     margin-top: auto;
     height: 250px;
     font-size: 25px;
+    z-index: 10;
 
 }
 
@@ -132,6 +140,10 @@ header p {
   margin-left: 70px;
 }
 
+.index_content h2 {
+  align-items: center;
+}
+
 .index_content {
     color: white;
     margin-left: 150px;
@@ -142,7 +154,7 @@ header p {
     position: relative;
     box-sizing: border-box;
     padding-bottom: 50px;
-    font-size: 30px;
+    font-size: 20px;
     background: linear-gradient(to right, #141b0f, #323513);
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 
@@ -330,81 +342,6 @@ header p {
     background-color: #575757;
   }
 
-  /*Responzivnost*/
-    @media (max-width: 768px) {
-    .left-nav {
-      position: static;
-      width: 100%;
-      height: auto;
-      border-right: none;
-      padding-top: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      box-shadow: none;
-      background-color: #ddd;
-    }
-  
-    .left-nav a {
-      font-size: 14px;
-      padding: 10px;
-      justify-content: center;
-    }
-  
-    .content {
-      margin-left: 0;
-      padding: 15px;
-    }
-  
-    header {
-      height: auto;
-      padding: 20px 10px;
-      flex-direction: column;
-    }
-  
-    header .logo {
-      position: static;
-      margin-top: 10px;
-      width: 80px;
-    }
-  
-    .top-nav {
-      flex-wrap: wrap;
-      text-align: center;
-    }
-  
-    .top-nav a {
-      display: block;
-      padding: 10px;
-      font-size: 14px;
-    }
-  
-    .galerija img, .galerija_sport img {
-      width: 100%;
-      max-width: 100%;
-    }
-  
-    .pdf-okvir {
-      width: 100%;
-      height: auto;
-    }
-  }
-  
-  /* TABLETI */
-  @media (max-width: 1024px) {
-    .left-nav {
-      width: 100%;
-      position: static;
-      display: flex;
-      justify-content: space-around;
-      background-color: #eee;
-      padding: 10px 0;
-    }
-  
-    .content {
-      margin-left: 0;
-    }
-  }
   
   .galerija_index {
     display: flex;
@@ -483,3 +420,109 @@ header p {
   opacity: 0;
 }
 
+/* Responzivnost */
+@media (max-width: 1024px) {
+  .left-nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    border-right: none;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-nav a,
+  .left-nav a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .galerija img {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 80px;
+    top: 10px;
+    right: 20px;
+  }
+
+  .left-nav {
+    display: none;
+  }
+  .top-nav .logo{
+    display: none;
+  }
+
+  body {
+    background: none;
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 450px) {
+  .galerija img {
+    width: 100%;
+  }
+  
+  header .naslov h1{
+    font-size: 40px;
+  }
+
+  .rezerviraj-gumb {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .left-nav {
+    display: none;
+  }
+  .top-nav .logo{
+    display: none;
+  }
+
+  .index_content{
+    font-size: 15px;
+    max-width: 480px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  body {
+    background: none;
+    background-color: #ffffff;
+  }
+
+  .content{
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .content_margin{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .pdf-okvir {
+    width: 400px;    /* širina A4 stranice */
+    height: 300px;  /* visina A4 stranice */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin-left: 0px;
+  }
+
+}
