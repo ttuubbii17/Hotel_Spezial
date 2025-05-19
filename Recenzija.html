@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bazen, pool, more, adriatic sea, vrt, villa, odmaralište, bar, garden, restoran, sport, škola jedrenja i ronjenja, doručak, wine, vino">
+    <meta name="keywords" content="hotelspezial, hotel, spezial, 5 zvjezdica, krk, hoteli blizu mene, hotel deals, hotel room, 5 star hotels, best hotel krk">
+    <title>Hotel Spezial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="naslov">
+        <h1>Hotel Spezial</h1>
+        <p>Dobrodošli na službenu web stranicu Hotela!</p>
+    </div>
+        
+        <!-- Gornja navigacija -->
+    <div class="top-nav">
+        <img src="SPIDERS__1_-removebg-preview.png" alt="Logo Hotela" class="logo">
+        <a href="index.html">Početna</a>
+        <a href="Ponuda.html">Hotel</a>
+        <a href="Aktivnosti.html">Aktivnosti</a>
+        <a href="Restoran.html">Restoran</a>
+        <a href="Recenzija.html">Recenzije</a>
+    </div>
+    </header>
+<div class="rez_rec">
+<div class="rezervacija-forma">
+    <h2>Recenzija</h2>
+    <form action="https://formspree.io/f/xldboedb" method="post">
+      <label for="ime">Ime i prezime:</label>
+      <input type="text" id="ime" name="ime" required>
+  
+      <label for="email">Email adresa:</label>
+      <input type="email" id="email" name="email" required>
+
+    <label for="ocjena">Ocjena:</label>
+        <input type="number" id="ocjena" name="ocjena" min="1" max="5" step="1" placeholder="1-5" required>
+
+      <label for="napomene">Komentar:</label>
+      <textarea id="napomene" name="napomene" rows="5"></textarea>
+  
+      <button type="submit">Pošalji recenziju</button>
+    </form>
+  </div>
+</div>  
+</body>
+<div class="footer">
+    <p>&copy; 2025 Hotel Spezial. Sva prava pridržana.</p>
+    <p>Adresa: Porat 58, 51511 Malinska, Hrvatska</p>
+    <p>Telefon: +385 21 123 456 | Email: info.hotelspezial@gmail.com</p>
+    <p>
+      <a href="Pravila_privatnosti.pdf" style="color: #ccc;">Politika privatnosti</a>
+    </p>
+</div>
+</html>
