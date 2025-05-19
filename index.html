@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Spezial</title>
     <link rel="stylesheet" href="styles.css"> <!-- Povezivanje s CSS datotekom -->
-    
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Karla&display=swap" rel="stylesheet">
  
 </head>
 <body>
@@ -40,11 +40,37 @@
             Od 1997. godine s Vama, da Vam ovaj odmor bude Spezial
         </p>
             
-        <div class="slika-okvir">
-            
-        </div>
+            <div class="slika-kartica fade-in-section">
+                <img src="Slike/Hotel_front-background.jpg" alt="Soba s pogledom">
+                <div class="prikrij-tekst">Sobe s pogledom</div>
+            </div>
+            <div class="slika-kartica fade-in-section">
+                <img src="Slike/Hotel_front_upscaled.jpg" alt="Spa i bazeni">
+                <div class="prikrij-tekst">Spa i bazeni</div>
+            </div>
+            <div class="slika-kartica fade-in-section">
+                <img src="Slike/Hotel_front-background_exposure.jpg" alt="Restoran uz more">
+                <div class="prikrij-tekst">Restoran uz more</div>
+            </div>
     </div>
-</body>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animira samo jednom
+      }
+    });
+  }, {
+    threshold: 1
+  });
+
+  document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 <div class="footer">
     <p>&copy; 2025 Hotel Spezial. Sva prava pridržana.</p>
     <p>Adresa: Porat 58, 51511 Malinska, Hrvatska</p>
@@ -53,4 +79,5 @@
       <a href="Pravila_privatnosti.pdf" style="color: #ccc;">Politika privatnosti</a>
     </p>
 </div>
+</body>
 </html>
