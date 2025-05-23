@@ -79,12 +79,8 @@
         const ukupno = brojNocenja * cijenePoNoci[tipSobe];
   
         iznos.value = ukupno.toFixed(2);
-  
-        if (nacin === 'gotovina') {
-          iznos.readOnly = true;
-        } else {
-          iznos.readOnly = true;
-        }
+        iznos.readOnly = true;
+        
       } else {
         iznos.value = '';
         iznos.readOnly = false;
